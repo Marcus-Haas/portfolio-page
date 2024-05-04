@@ -1,0 +1,25 @@
+<div class="skills-main">
+    <div class="skills-content">
+        <div class="skills">
+            @for (skill of SKILLS_ARRAY; track SKILLS_ARRAY;){
+            <div>
+                <img src="/assets/img/skills_img/{{ skill }}.png" alt="">
+                <span class="skill-name">{{ skill }}</span>
+            </div>
+            }
+
+        </div>
+        <div class="skill-textframe">
+            <div>
+                <span class="headline">My skills</span>
+                <div class="skill-vector"></div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nisi ipsa provident, quia sint
+                distinctio est</p>
+            <button class="touch-btn">Get in touch</button>
+        </div>
+    </div>
+    <div class="skill-shadow">
+        <img src="/assets/img/skill_shadow.png" alt="">
+    </div>
+</div>
