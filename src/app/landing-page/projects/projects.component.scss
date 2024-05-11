@@ -1,0 +1,103 @@
+.main-projects {
+    display: flex;
+    flex-direction: column;
+
+    >div {
+        display: flex;
+        align-items: center;
+        gap: 100px;
+        padding-top: 100px;
+        z-index: 1;
+
+    }
+}
+
+.image-container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+
+    >img {
+        height: 340px;
+    }
+}
+
+.details-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
+
+    >div {
+        display: flex;
+        gap: 80px;
+        margin-top: 20px;
+    }
+}
+
+.name {
+    font-size: 32px;
+    font-weight: 700;
+    color: #4B47FF;
+}
+
+.language {
+    font-size: 23px;
+    color: #00BEE8;
+}
+
+.test-btn {
+    width: 150px;
+    height: 55px;
+    background-color: #4B47FF;
+    border: none;
+    color: white;
+    font-family: 'Poppins';
+    border-radius: 10px;
+    font-size: 22px;
+    transition: ease-in-out 100ms;
+
+    &:hover {
+        background-color: #00BEE8;
+        cursor: pointer;
+    }
+}
+
+.git-btn {
+    width: 150px;
+    height: 55px;
+    background-color: #141D2F;
+    border: 1px solid #00BEE8;
+    color: white;
+    font-family: 'Poppins';
+    border-radius: 10px;
+    font-size: 22px;
+    transition: ease-in-out 100ms;
+
+    &:hover {
+        background-color: #00BEE8;
+        cursor: pointer;
+    }
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.flex-end {
+    align-items: flex-end;
+}
+
+.position-1 {
+    justify-content: flex-start;
+}
+
+.position-2 {
+    justify-content: flex-end;
+}
+
+.text-end {
+    text-align: end;
+}

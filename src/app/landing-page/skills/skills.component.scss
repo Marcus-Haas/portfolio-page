@@ -7,6 +7,7 @@
 .skills-content {
     display: flex;
     width: 100%;
+    padding-top: 100px;
 
     >div {
         margin-top: 100px;
@@ -20,7 +21,7 @@
     column-gap: 100px;
     width: 140%;
     flex-wrap: wrap;
-    z-index: 1;
+    z-index: 2;
 
     >div {
         width: 90px;
@@ -34,10 +35,9 @@
 
         >img {
             height: 60px;
-            transition: 100ms ease-in;
 
             &:hover {
-                animation: dancing-skill 200ms infinite;
+                animation: dancing-skill 500ms infinite alternate;
             }
         }
     }
@@ -46,10 +46,6 @@
 @keyframes dancing-skill {
     0% {
         transform: translateY(0px);
-    }
-
-    50% {
-        transform: translateY(-5px);
     }
 
     100% {
@@ -86,7 +82,7 @@
 .skill-vector {
     position: absolute;
     right: 0;
-    height: 4px;
+    height: 3px;
     width: 60px;
     background-color: #4B47FF;
 }
@@ -114,4 +110,5 @@
     position: absolute;
     top: 200px;
     left: 0;
+    z-index: 1;
 }

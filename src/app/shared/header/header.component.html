@@ -1,0 +1,19 @@
+<header>
+    <div>
+        <p class="first-letter">M</p>arcus
+    </div>
+    <nav>
+        <div>
+            <a href="#about-me" (click)="navigation('about-me')" [class.hoverColor]="aboutMeBorder">About me</a>
+            <div class="border" [class.hoverBorder]="aboutMeBorder"></div>
+        </div>
+        <div>
+            <a href="#skills" (click)="navigation('skills')" [class.hoverColor]="skillsBorder">Skills</a>
+            <div class="border" [class.hoverBorder]="skillsBorder"></div>
+        </div>
+        <div>
+            <a href="#portfolio" (click)="navigation('portfolio')" [class.hoverColor]="portfolioBorder">Portfolio</a>
+            <div class="border" [class.hoverBorder]="portfolioBorder"></div>
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,107 @@
+<div class="contact-main">
+    <div class="contact-head">
+        <div class="contact-vector"></div>
+        <span class="contact-name">Contact</span>
+    </div>
+
+    <div class="contact-content" id="contact">
+        <div class="contact-details">
+            <span class="contact-topic">Got a problem to solve?</span>
+            <span>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing
+                to your projects with my work.</span>
+            <span>Need a Frontend developer? <b>Contact me!</b></span>
+        </div>
+        <div class="contact-form">
+            <form ngValidateForm (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+
+                <div class="input-helper">
+                    <input #name="ngModel" onlyText [(ngModel)]="contactData.name"
+                        [class.green-input]="name.valid && name.touched" [class.red-input]="!name.valid && name.touched"
+                        type="text" class="input-style" id="name" name="name" placeholder="Your name" required>
+                    <div class="input-image">
+                        @if (!name.valid && name.touched) {
+                        <img src="/assets/img/stop.png" alt>
+                        }
+                        @if (name.valid && name.touched) {
+                        <img src="/assets/img/check.png" alt>
+                        }
+                    </div>
+
+                    @if (!name.valid && name.touched) {
+                    <div class="warning-text">Your name is required</div>
+                    }
+                </div>
+
+                <div class="input-helper">
+                    <input autocomplete="false" #email="ngModel" [(ngModel)]="contactData.email" class="input-style"
+                        id="email" type="email" placeholder="Your email" name="email" required
+                        [class.green-input]="email.valid && email.touched"
+                        [class.red-input]="!email.valid && email.touched">
+                    <div class="input-image">
+                        @if (!email.valid && email.touched) {
+                        <img src="/assets/img/stop.png" alt>
+                        }
+                        @if (email.valid && email.touched) {
+                        <img src="/assets/img/check.png" alt>
+                        }
+                    </div>
+
+                    @if (!email.valid && email.touched) {
+                    <div class="warning-text">Your email is required</div>
+                    }
+                </div>
+
+                <div class="input-helper">
+                    <div class="textarea-helper" [class.green-input]="message.valid && message.touched"
+                        [class.red-border]="!message.valid && message.touched">
+                        <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" id="message"
+                            placeholder="Your message" required></textarea>
+                    </div>
+                    <div class="input-image">
+                        @if (!message.valid && message.touched) {
+                        <img src="/assets/img/stop.png" alt>
+                        }
+                        @if (message.valid && message.touched) {
+                        <img src="/assets/img/check.png" alt>
+                        }
+                    </div>
+
+                    @if (!message.valid && message.touched) {
+                    <div class="warning-text">Your message is empty</div>
+                    }
+                </div>
+
+                <div class="input-helper">
+                    <div class="checkbox-div">
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox" (change)="onChecked($event)">
+                            <span class="checkmark"></span>
+                        </label>
+                        <span class="privacy">I´ve read the <a href="">privacy policy</a> and agree to the processing of
+                            my data as outlined.</span>
+                    </div>
+
+
+                    @if (!checkbox && checkboxTouched){
+                    <div class="warning-text">Please accept the privacy policy</div>}
+                </div>
+
+                <div class="submit-helper">
+                    <input [disabled]="!contactForm.valid || !checkbox"
+                        [class.valid-btn]="contactForm.valid && checkbox" class="submit-btn" type="submit"
+                        value="Send message :)">
+                </div>
+            </form>
+            <div class="go-up-btn">
+                <a href="#atf">
+                    <div></div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-shadow">
+        <img src="/assets/img/contact_shadow.png" alt="">
+    </div>
+
+</div>

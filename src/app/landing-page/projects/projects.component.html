@@ -1,0 +1,19 @@
+<div class="main-projects">
+    @for (item of projetcs; track $index) {
+
+    <div [class.reverse]="$index % 2 != 0">
+        <div class="image-container" [ngClass]="$index % 2 != 0 ? 'position-1' : 'position-2'">
+            <img src="/assets/img/projects_img/{{ item.image }}.png" alt="">
+        </div>
+        <div class="details-container" [class.flex-end]="$index % 2 != 0">
+            <span class="name">{{ item.name }}</span>
+            <span class="language">{{ item.language }}</span>
+            <span [class.text-end]="$index % 2 != 0">{{ item.description }}</span>
+            <div>
+                <button class="test-btn">Live test</button>
+                <button class="git-btn">Github</button>
+            </div>
+        </div>
+    </div>
+    }
+</div>
