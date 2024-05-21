@@ -17,15 +17,19 @@ export class ContactComponent {
   checkboxTouched: boolean = false;
 
 
+
   contactData = {
     name: "",
     email: "",
     message: ""
   };
 
+  constructor() { }
+
   onSubmit(ngForm: NgForm) {
     if (ngForm.valid) {
       console.log(this.contactData);
+
     }
   }
 

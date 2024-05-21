@@ -13,13 +13,12 @@ header {
     color: white;
     padding: 37px 100px 37px 100px;
     box-sizing: border-box;
-    
+}
 
-    >div {
-        display: flex;
-        align-items: center;
-        font-weight: 600;
-    }
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
 }
 
 .first-letter {
@@ -47,8 +46,12 @@ a {
     height: 3px;
     width: 45px;
     background-color: #141D2F;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
+}
+
+.border-trans {
+    height: 2px;
+    width: 15px;
+    background-color: #141D2F;
 }
 
 .hoverColor {
@@ -59,3 +62,64 @@ a {
     background-color: #4B47FF;
 }
 
+.translate-box {
+    display: flex;
+    gap: 5px;
+    font-size: 16px;
+
+    >div {
+        &:hover {
+            color: #00BEE8;
+            cursor: pointer;
+        }
+    }
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+.burger-overlay {
+    height: 100vh;
+    max-width: 680px;
+    width: 100%;
+    background-color: rgba(20, 29, 47, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    transform: translateX(100vw);
+    transition: 225ms ease-in-out;
+}
+
+.burger-show {
+    transform: translateX(0);
+}
+
+.overlay-head {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    padding: 37px 50px 37px 50px;
+    box-sizing: border-box;
+    font-size: 30px;
+    background-color: #141D2F;
+
+    >img {
+        height: 32px;
+    }
+}
+
+.close-burger {
+    cursor: pointer;
+}
+
+.mobile-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    gap: 20px;
+}

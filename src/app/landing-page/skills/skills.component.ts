@@ -9,6 +9,6 @@ import { Component } from '@angular/core';
 })
 export class SkillsComponent {
 
-  SKILLS_ARRAY = ['Angular', 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'GIT', 'Rest-Api', 'Firebase', 'Material design'];
+  SKILLS_ARRAY = ['HTML', 'CSS', 'JavaScript', 'Angular', 'TypeScript', 'GIT', 'Rest-Api', 'Firebase', 'Material design'];
 
 }

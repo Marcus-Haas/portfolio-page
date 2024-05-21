@@ -1,5 +1,5 @@
 <header>
-    <div>
+    <div class="logo">
         <p class="first-letter">M</p>arcus
     </div>
     <nav>
@@ -15,5 +15,48 @@
             <a href="#portfolio" (click)="navigation('portfolio')" [class.hoverColor]="portfolioBorder">Portfolio</a>
             <div class="border" [class.hoverBorder]="portfolioBorder"></div>
         </div>
+        <div class="translate-box">
+            <div>
+                <div (click)="translation('en')" [class.hoverColor]="englishBorder">EN</div>
+                <div class="border-trans" [class.hoverBorder]="englishBorder"></div>
+            </div>
+            |
+            <div>
+                <div (click)="translation('de')" [class.hoverColor]="germanBorder">DE</div>
+                <div class="border-trans" [class.hoverBorder]="germanBorder"></div>
+            </div>
+        </div>
     </nav>
+    <div class="hamburger-menu" (click)="showMenu()">
+        <img src="/assets/img/burger.png" alt="">
+    </div>
+
+    
+    <!-------------------------------------Mobile menu------------------------------------------------------->
+
+    <div class="burger-overlay" [class.burger-show]="mobile_menu">
+        <div class="overlay-head">
+            <div class="logo">
+                <p class="first-letter">M</p>arcus
+            </div>
+            <div class="close-burger" (click)="closeMenu()">
+                <img class="lolo" src="/assets/img/close.png" alt="">
+            </div>
+        </div>
+        <div class="mobile-nav">
+            <div (click)="closeMenu()">
+                <a href="#about-me">About me</a>
+            </div>
+            <div (click)="closeMenu()">
+                <a href="#skills">My skills</a>
+            </div>
+            <div (click)="closeMenu()">
+                <a href="#portfolio">Portfolio</a>
+            </div>
+            <div (click)="closeMenu()">
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </div>
+
 </header>
