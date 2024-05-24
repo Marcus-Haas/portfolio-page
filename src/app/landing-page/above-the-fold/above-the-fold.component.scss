@@ -77,19 +77,18 @@
 
 .atf-image {
     position: absolute;
-    margin-right: 50px;
     width: 500px;
     height: 500px;
 }
 
 .wave {
     position: absolute;
-    bottom: -300px;
+    bottom: 0px;
     width: 100%;
 
     >img {
         width: 100%;
-        height: 800px;
+        height: 35vh;
     }
 }
 

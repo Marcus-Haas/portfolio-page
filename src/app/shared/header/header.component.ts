@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { GlobalService } from '../../global.service';
 
 @Component({
   selector: 'app-header',
@@ -10,19 +11,16 @@ import { CommonModule } from '@angular/common';
 })
 export class HeaderComponent {
 
-
-
-
+  constructor(public language: GlobalService) { }
 
   aboutMeBorder = false;
   skillsBorder = false;
   portfolioBorder = false;
-  englishBorder = false;
+  englishBorder = true;
   germanBorder = false;
 
 
   mobile_menu = false;
-
 
 
   navigation(topic: string) {
@@ -46,14 +44,26 @@ export class HeaderComponent {
     this.hideTranslationBorder();
     if (language == 'en') {
       this.englishBorder = true;
+      this.language.german = false;
+      this.language.english = true;
     } else if (language == 'de') {
       this.germanBorder = true;
+      this.language.german = true;
+      this.language.english = false;
     }
   }
 
   hideTranslationBorder() {
     this.englishBorder = false;
     this.germanBorder = false;
+  }
+
+  showAndHideMenu() {
+    if (this.mobile_menu) {
+      this.closeMenu();
+    } else {
+      this.showMenu()
+    }
   }
 
   showMenu() {
@@ -63,5 +73,4 @@ export class HeaderComponent {
   closeMenu() {
     this.mobile_menu = false;
   }
-
 }

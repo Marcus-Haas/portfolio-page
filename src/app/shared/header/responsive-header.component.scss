@@ -14,39 +14,61 @@
         cursor: pointer;
         transition: 225ms ease-in-out;
 
-        &:active {
-            animation-name: burger-icon-change;
-            animation-duration: 225ms;
-            animation-fill-mode: forwards;
-        }
+        // &:active {
+        //     animation-name: burger-icon-change;
+        //     animation-duration: 225ms;
+        //     animation-fill-mode: forwards;
+        // }
     }
 
     .close-burger {
         transition: 225ms ease-in-out;
 
-        &:active {
-            animation-name: burger-icon-change;
-            animation-duration: 225ms;
-            animation-fill-mode: forwards;
-            animation-direction: reverse;
-        }
+        // &:active {
+        //     animation-name: burger-icon-change;
+        //     animation-duration: 225ms;
+        //     animation-fill-mode: forwards;
+        //     animation-direction: reverse;
+        // }
     }
 }
 
-@keyframes burger-icon-change {
-    0% {
-        content: url('/assets/img/burger.png');
+// @keyframes burger-icon-change {
+//     0% {
+//         content: url('/assets/img/burger.png');
+//         opacity: 0;
+//     }
+
+//     33% {
+//         content: url('/assets/img/transition.png');
+//     }
+
+//     66% {
+//         content: url('/assets/img/medium-close.png');
+//     }
+
+//     100% {
+//         content: url('/assets/img/close.png');
+//     }
+// }
+
+
+@media(max-width: 550px) {
+    header {
+        padding: 37px 30px 37px 30px;
     }
 
-    33% {
-        content: url('/assets/img/transition.png');
+    .overlay-head {
+        padding: 37px 30px 37px 30px;
+    }
+}
+
+@media(max-width: 450px) {
+    header {
+        padding: 37px 15px 37px 15px;
     }
 
-    66% {
-        content: url('/assets/img/medium-close.png');
-    }
-
-    100% {
-        content: url('/assets/img/close.png');
+    .overlay-head {
+        padding: 37px 15px 37px 15px;
     }
 }

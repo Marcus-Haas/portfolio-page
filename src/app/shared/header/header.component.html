@@ -27,11 +27,11 @@
             </div>
         </div>
     </nav>
-    <div class="hamburger-menu" (click)="showMenu()">
+    <div id="test" class="hamburger-menu" (click)="showAndHideMenu()">
         <img src="/assets/img/burger.png" alt="">
     </div>
 
-    
+
     <!-------------------------------------Mobile menu------------------------------------------------------->
 
     <div class="burger-overlay" [class.burger-show]="mobile_menu">
@@ -40,7 +40,7 @@
                 <p class="first-letter">M</p>arcus
             </div>
             <div class="close-burger" (click)="closeMenu()">
-                <img class="lolo" src="/assets/img/close.png" alt="">
+                <img src="/assets/img/close.png" alt="">
             </div>
         </div>
         <div class="mobile-nav">
