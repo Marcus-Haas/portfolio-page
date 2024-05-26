@@ -32,7 +32,7 @@
     </div>
 
 
-    <!-------------------------------------Mobile menu------------------------------------------------------->
+    <!-------------------------------------Mobile menu start--------------------------------------------------->
 
     <div class="burger-overlay" [class.burger-show]="mobile_menu">
         <div class="overlay-head">
@@ -56,7 +56,14 @@
             <div (click)="closeMenu()">
                 <a href="#contact">Contact</a>
             </div>
+            <div class="translate-box-mobile">
+                <div (click)="closeMenu(); translation('en')">EN</div>
+                |
+                <div (click)="closeMenu(); translation('de')">DE</div>
+            </div>
         </div>
     </div>
+
+    <!-------------------------------------Mobile menu end--------------------------------------------------->
 
 </header>

@@ -12,11 +12,15 @@
             <span [class.text-end]="$index % 2 != 0">{{ item.en_description }}</span>
             }
             @if(langunage.german){
-                <span [class.text-end]="$index % 2 != 0">{{ item.ger_description }}</span>
-                }
+            <span [class.text-end]="$index % 2 != 0">{{ item.ger_description }}</span>
+            }
             <div>
-                <button class="test-btn">Live test</button>
-                <button class="git-btn">Github</button>
+                <a [href]="item.link" target="_blank">
+                    <button class="test-btn">Live test</button>
+                </a>
+                <a [href]="item.git" target="_blank">
+                    <button class="git-btn">Github</button>
+                </a>
             </div>
         </div>
     </div>

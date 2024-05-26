@@ -83,7 +83,7 @@ a {
     height: 100vh;
     max-width: 680px;
     width: 100%;
-    background-color: rgba(20, 29, 47, 0.8);
+    background-color: rgba(20, 29, 47, 0.85);
     position: absolute;
     top: 0;
     left: 0;
@@ -122,4 +122,16 @@ a {
     justify-content: center;
     height: 50vh;
     gap: 20px;
+}
+
+.translate-box-mobile {
+    display: flex;
+    gap: 20px;
+
+    >div {
+        &:hover {
+            color: #00BEE8;
+            cursor: pointer;
+        }
+    }
 }
