@@ -13,34 +13,21 @@
         font-size: 40px;
     }
 
-    .shadow-image {
-        width: 450px;
-    }
-
-    .atf-image {
-        width: 460px;
-        height: 476px;
-    }
-
 }
 
 @media(max-width: 1100px) {
+    .atf-main {
+        padding: 0px 50px 100px 50px;
+    }
+
     .atf-image {
-        width: 370px;
-        height: 390px;
+        left: 0;
     }
 
     .shadow-image {
-        height: 700px;
+        position: absolute;
+        left: -100px;
     }
-
-    // .wave {
-    //     bottom: -200px;
-
-    //     >img {
-    //         height: 700px;
-    //     }
-    // }
 
     .frontend-text {
         font-size: 25px;
@@ -56,10 +43,6 @@
         font-size: 29px;
     }
 
-    .developer-container {
-        margin-right: 50px;
-    }
-
     .atf-scroll-down {
         right: 25px;
     }
@@ -70,31 +53,38 @@
         flex-direction: column;
         align-items: initial;
         justify-content: normal;
+        gap: 30px;
+        overflow: clip;
+    }
+
+    .atf-shadow {
+        width: 100%;
+        height: 70vh;
     }
 
     .shadow-image {
-        height: 620px;
-        width: auto;
-        max-width: 100%;
+        left: unset;
+        height: 100%;
+        margin-top: 100px;
     }
 
     .atf-image {
-        height: 575px;
-        width: 500px;
-
+        left: unset;
+        height: 65vh;
+        margin-top: 100px;
     }
 
     .right-content {
         gap: 20px;
     }
 
-    // .wave {
-    //     bottom: 0;
+    .wave {
+        top: 53vh;
 
-    //     >img {
-    //         height: 400px;
-    //     }
-    // }
+        >img {
+            height: 45vh;
+        }
+    }
 
     .atf-scroll-down {
         display: none;
@@ -102,6 +92,8 @@
     }
 
     .atf-bottom {
+        bottom: 5px;
+
         a {
             >span {
                 display: none;
@@ -111,19 +103,17 @@
 }
 
 @media(max-width: 550px) {
-    .atf-shadow {
-        align-items: flex-end;
-    }
+    .atf-main {
+        padding: 0px 30px 100px 30px;
 
-    .atf-image {
-        height: 470px;
-        width: 400px;
     }
 }
 
 @media(max-width: 450px) {
     .atf-main {
         gap: 15px;
+        padding: 0px 15px 100px 15px;
+
     }
 
     .right-content {
@@ -131,21 +121,20 @@
     }
 
     .atf-image {
-        width: 300px;
-        height: 350px;
+        height: 55vh;
     }
 
     .shadow-image {
-        height: 330px;
+        height: 80%;
     }
 
-    // .wave {
-    //     bottom: 85px;
+    .wave {
 
-    //     >img {
-    //         height: 222px;
-    //     }
-    // }
+
+        >img {
+            height: 25vh;
+        }
+    }
 
     .atf-border {
         width: 55px;
@@ -155,20 +144,16 @@
         gap: 30px;
     }
 
-    .developer-container {
-        margin-right: 15px;
-    }
-
     .frontend-text {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .name {
-        font-size: 32px;
+        font-size: 30px;
     }
 
     .rotate {
-        font-size: 26px;
+        font-size: 23px;
     }
 
     .talk {

@@ -1,15 +1,17 @@
 .atf-main {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-color: #141D2F;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0px 100px 100px 100px;
+    box-sizing: border-box;
 }
 
 .right-content {
-    z-index: 1;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,7 +21,6 @@
 .developer-container {
     display: flex;
     align-items: center;
-    margin-right: 100px;
 }
 
 .name-box {
@@ -63,38 +64,42 @@
 }
 
 .atf-shadow {
-    margin-top: 100px;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 40%;
+    height: 100vh;
 }
 
 .shadow-image {
-    width: 650px;
-    height: 800px;
+    width: auto;
+    height: 75%;
 }
 
 .atf-image {
     position: absolute;
-    width: 500px;
-    height: 500px;
+    height: 80vh;
 }
 
 .wave {
     position: absolute;
-    bottom: 0px;
+    left: 0;
+    bottom: 0;
+    top: 50vh;
     width: 100%;
+    z-index: 1;
 
     >img {
         width: 100%;
-        height: 35vh;
+        height: 90vh;
     }
 }
 
 .atf-bottom {
     position: absolute;
-    bottom: 10px;
+    bottom: 100px;
+    left: 0;
     display: flex;
     align-items: center;
     gap: 40px;
@@ -123,12 +128,13 @@
 
 .atf-scroll-down {
     position: absolute;
-    bottom: 50px;
+    bottom: 150px;
     right: 50px;
     display: flex;
     align-items: center;
     rotate: 90deg;
     gap: 10px;
+    z-index: 1;
 
 
     >img {
