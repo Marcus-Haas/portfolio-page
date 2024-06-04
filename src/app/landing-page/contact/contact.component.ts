@@ -18,8 +18,9 @@ export class ContactComponent {
 
   constructor(public language: GlobalService) { }
 
-  checkbox: boolean = false;
   checkboxTouched: boolean = false;
+  submitted: boolean = false;
+  accepted: boolean = false;
 
 
   germanText = {
@@ -77,7 +78,9 @@ export class ContactComponent {
         .subscribe({
           next: (response) => {
             ngForm.resetForm();
-            this.checkbox = false;
+            this.accepted = false;
+            this.checkboxTouched = false
+            this.submitted = true;
           },
           error: (error) => {
             console.error(error);
@@ -90,17 +93,7 @@ export class ContactComponent {
     }
   }
 
-  onChecked(event: any) {
-    if (event.target.checked) {
-      this.checkbox = true;
-      this.checkboxTouched = true;
-    } else {
-      this.checkbox = false;
-      this.checkboxTouched = true;
-
-    }
-    console.log(this.checkbox);
+  closeDialog() {
+    this.submitted = false;
   }
-
-
 }

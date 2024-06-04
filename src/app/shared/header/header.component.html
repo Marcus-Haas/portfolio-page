@@ -1,18 +1,20 @@
 <header>
+    <a href="" title="home">
     <div class="logo">
         <p class="first-letter">M</p>arcus
     </div>
+    </a>
     <nav>
         <div>
-            <a href="#about-me" (click)="navigation('about-me')" [class.hoverColor]="aboutMeBorder">About me</a>
+            <a class="header-link" href="#about-me" (click)="navigation('about-me')" [class.hoverColor]="aboutMeBorder">About me</a>
             <div class="border" [class.hoverBorder]="aboutMeBorder"></div>
         </div>
         <div>
-            <a href="#skills" (click)="navigation('skills')" [class.hoverColor]="skillsBorder">Skills</a>
+            <a class="header-link" href="#skills" (click)="navigation('skills')" [class.hoverColor]="skillsBorder">Skills</a>
             <div class="border" [class.hoverBorder]="skillsBorder"></div>
         </div>
         <div>
-            <a href="#portfolio" (click)="navigation('portfolio')" [class.hoverColor]="portfolioBorder">Portfolio</a>
+            <a class="header-link" href="#portfolio" (click)="navigation('portfolio')" [class.hoverColor]="portfolioBorder">Portfolio</a>
             <div class="border" [class.hoverBorder]="portfolioBorder"></div>
         </div>
         <div class="translate-box">

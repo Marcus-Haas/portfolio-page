@@ -32,7 +32,7 @@ export class ProjectsComponent {
       ger_description: 'Aufgabenmanager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.',
       image: 'join',
       link: 'https://join.marcus-haas.com/',
-      
+      git: 'https://github.com/Marcus-Haas/new-join'
     },
     {
       name: 'Simple CRM',
@@ -40,14 +40,9 @@ export class ProjectsComponent {
       en_description: 'A very Simple Customer Relationship Management system working with CRUD functionality.',
       ger_description: 'Ein einfaches Customer-Relationship-Management-System, das mit CRUD-Funktionalität arbeitet.',
       image: 'simple_crm',
-      link: 'https://el-pollo-loco.marcus-haas.com/',
-      
+      link: '',
+      git: ''
     },
   ];
-
-
-  info(){
-    alert('this link/site is under construction');
-  }
 
 }

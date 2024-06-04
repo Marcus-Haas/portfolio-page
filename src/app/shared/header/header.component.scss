@@ -32,14 +32,13 @@ nav {
     font-size: 20px;
 }
 
+.header-link:hover {
+    color: #00BEE8;
+}
+
 a {
     text-decoration: none;
     color: white;
-
-    &:hover {
-        color: #00BEE8;
-        ;
-    }
 }
 
 .border {
