@@ -132,8 +132,8 @@
     @if(submitted){
     <div class="dialog-frame" (click)="closeDialog()">
         <div class="dialog-content">
-            <h1>Vielen Dank :)</h1>
-            <span>Ich habe Ihre Nachricht erhalten und werde mich in Kürze bei Ihnen melden.</span>
+            <h1>{{ language.german ? germanText.submit_headline : englishText.submit_headline }}</h1>
+            <span>{{ language.german ? germanText.submit_text : englishText.submit_text }}</span>
         </div>
     </div>
     }

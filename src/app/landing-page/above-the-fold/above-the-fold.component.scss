@@ -1,6 +1,6 @@
 .atf-main {
     position: relative;
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
     background-color: #141D2F;
     display: flex;
@@ -86,7 +86,7 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    top: 50vh;
+    top: 45vh;
     width: 100%;
     z-index: 1;
 
@@ -98,7 +98,7 @@
 
 .atf-bottom {
     position: absolute;
-    bottom: 100px;
+    bottom: 25px;
     left: 0;
     display: flex;
     align-items: center;
@@ -128,7 +128,7 @@
 
 .atf-scroll-down {
     position: absolute;
-    bottom: 150px;
+    bottom: 50px;
     right: 50px;
     display: flex;
     align-items: center;

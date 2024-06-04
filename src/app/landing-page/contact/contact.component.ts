@@ -33,7 +33,9 @@ export class ContactComponent {
     warning_email: 'Deine Email ist erforderlich',
     warning_message: 'Bitte schreibe eine Nachricht',
     warning_policy: 'Bitte akzeptiere die Datenschutzerklärung',
-    submit_btn: 'Jetzt senden :)'
+    submit_btn: 'Jetzt senden :)',
+    submit_headline: 'Vielen Dank :)',
+    submit_text: 'Ich habe Ihre Nachricht erhalten und werde mich in Kürze bei Ihnen melden.'
   };
 
   englishText = {
@@ -46,7 +48,9 @@ export class ContactComponent {
     warning_email: 'Your email is required',
     warning_message: 'Your message is empty',
     warning_policy: 'Please accept the privacy policy',
-    submit_btn: 'Send message :)'
+    submit_btn: 'Send message :)',
+    submit_headline: 'Thank you :)',
+    submit_text: 'I have received your message and will get back to you shortly.'
   };
 
 
