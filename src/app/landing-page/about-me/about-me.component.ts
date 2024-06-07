@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, QueryList, ViewChildren, ElementRef } from '@angular/core';
 import { GlobalService } from '../../global.service';
 
 @Component({
@@ -8,9 +8,26 @@ import { GlobalService } from '../../global.service';
   templateUrl: './about-me.component.html',
   styleUrls: ['./about-me.component.scss', './responsive-about-me.component.scss']
 })
-export class AboutMeComponent {
+export class AboutMeComponent implements AfterViewInit {
+
+  @ViewChildren('bulletPoint') bulletPoint!: QueryList<ElementRef>;
 
   constructor(public language: GlobalService) { }
+
+  ngAfterViewInit() {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('pling');
+          // observer.unobserve(entry.target);  // Stop observing once it is visible
+        } else {
+          entry.target.classList.remove('pling');
+        }
+      });
+    });
+
+    this.bulletPoint.forEach(point => observer.observe(point.nativeElement));
+  }
 
   about_me_en = {
     main_text: `Hi, I'm Marcus, a web developer living in the area of Cologne. I completed my further training at the Developer

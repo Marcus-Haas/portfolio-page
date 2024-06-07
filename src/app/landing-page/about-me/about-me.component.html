@@ -4,13 +4,13 @@
             <span>About me</span>
             <div class="about-me-bottom">
                 <p>{{ language.german ? about_me_ger.main_text : about_me_en.main_text }}</p>
-                <div class="about-me-details">
+                <div #bulletPoint class="about-me-details">
                     <div>
                         <img class="puzzle-bulp-picture" src="/assets/img/bulb.png" alt="">
                     </div>
                     <p>{{ language.german ? about_me_ger.personal_one : about_me_en.personal_one }}</p>
                 </div>
-                <div class="about-me-details">
+                <div #bulletPoint class="about-me-details">
                     <img class="puzzle-bulp-picture" src="/assets/img/puzzle.png" alt="">
                     <p>{{ language.german ? about_me_ger.personal_two : about_me_en.personal_two }}</p>
                 </div>
