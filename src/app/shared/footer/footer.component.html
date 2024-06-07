@@ -21,7 +21,12 @@
     </div>
     <div class="imprint-box">
         <div>
+            @if(language.german){
             <a routerLink="imprint">Impressum</a>
+            }
+            @if(language.english){
+                <a routerLink="imprint">Imprint</a>
+                }
             <div class="imprint-line"></div>
         </div>
     </div>
