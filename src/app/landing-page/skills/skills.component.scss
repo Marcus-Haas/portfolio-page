@@ -45,6 +45,11 @@
     }
 }
 
+.jumping {
+    animation: dancing-skill 500ms alternate;
+    animation-iteration-count: 6;   
+}
+
 @keyframes dancing-skill {
     0% {
         transform: translateY(0px);

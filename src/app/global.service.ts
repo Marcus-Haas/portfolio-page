@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { AfterViewInit, Injectable, QueryList, ViewChildren, ElementRef } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'

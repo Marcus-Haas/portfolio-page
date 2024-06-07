@@ -3,7 +3,7 @@
         <div class="skills">
             @for (skill of SKILLS_ARRAY; track SKILLS_ARRAY;){
             <div>
-                <img src="/assets/img/skills_img/{{ skill }}.png" alt="">
+                <img #jumping src="/assets/img/skills_img/{{ skill }}.png" alt="">
                 <span class="skill-name">{{ skill }}</span>
             </div>
             }
