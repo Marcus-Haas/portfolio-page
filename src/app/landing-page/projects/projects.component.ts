@@ -51,15 +51,15 @@ export class ProjectsComponent implements AfterViewInit {
       link: 'https://join.marcus-haas.com/',
       git: 'https://github.com/Marcus-Haas/new-join'
     },
-    // {
-    //   name: 'Simple CRM',
-    //   language: 'Angular | Firebase',
-    //   en_description: 'A very Simple Customer Relationship Management system working with CRUD functionality.',
-    //   ger_description: 'Ein einfaches Customer-Relationship-Management-System, das mit CRUD-Funktionalität arbeitet.',
-    //   image: 'simple_crm',
-    //   link: '',
-    //   git: ''
-    // },
+    {
+      name: 'Dummy für CRM',
+      language: 'Angular | Firebase',
+      en_description: 'A very Simple Customer Relationship Management system working with CRUD functionality.',
+      ger_description: 'Ein einfaches Customer-Relationship-Management-System, das mit CRUD-Funktionalität arbeitet.',
+      image: 'simple_crm',
+      link: '',
+      git: ''
+    },
   ];
 
 }

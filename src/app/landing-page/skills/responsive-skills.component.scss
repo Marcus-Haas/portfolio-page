@@ -34,12 +34,15 @@
 
     .skill-textframe {
         z-index: 2;
+        max-width: unset;
+        width: 100%;
 
     }
 
     .skills {
         width: 100%;
         justify-content: center;
+        max-width: unset;
 
         >div {
             justify-content: flex-start;
