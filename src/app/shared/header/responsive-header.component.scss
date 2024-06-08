@@ -1,3 +1,9 @@
+@media(max-width: 1600px) {
+    header {
+        padding: 37px 100px 37px 100px;
+    }
+}
+
 @media(max-width: 1100px) {
     header {
         padding: 37px 50px 37px 50px;
@@ -13,45 +19,12 @@
         display: flex;
         cursor: pointer;
         transition: 225ms ease-in-out;
-
-        // &:active {
-        //     animation-name: burger-icon-change;
-        //     animation-duration: 225ms;
-        //     animation-fill-mode: forwards;
-        // }
     }
 
     .close-burger {
         transition: 225ms ease-in-out;
-
-        // &:active {
-        //     animation-name: burger-icon-change;
-        //     animation-duration: 225ms;
-        //     animation-fill-mode: forwards;
-        //     animation-direction: reverse;
-        // }
     }
 }
-
-// @keyframes burger-icon-change {
-//     0% {
-//         content: url('/assets/img/burger.png');
-//         opacity: 0;
-//     }
-
-//     33% {
-//         content: url('/assets/img/transition.png');
-//     }
-
-//     66% {
-//         content: url('/assets/img/medium-close.png');
-//     }
-
-//     100% {
-//         content: url('/assets/img/close.png');
-//     }
-// }
-
 
 @media(max-width: 550px) {
     header {

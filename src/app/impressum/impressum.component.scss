@@ -1,6 +1,6 @@
 .imprint {
     background-color: #141D2F;
-    padding: 100px;
+    padding: 100px 200px 100px 200px;
     box-sizing: border-box;
     position: relative;
     overflow: clip;
@@ -21,7 +21,7 @@ h1 {
 }
 
 .imprint-vector {
-    width: 50px;
+    width: 150px;
     height: 3px;
     background-color: #4B47FF;
     position: absolute;
@@ -59,6 +59,16 @@ a {
     top: 0;
     right: -250px;
     height: 500px;
+}
+
+@media(max-width: 1600px) {
+    .imprint {
+        padding: 100px;
+    }
+
+    .imprint-vector {
+        width: 50px;
+    }
 }
 
 @media(max-width: 1438px) {

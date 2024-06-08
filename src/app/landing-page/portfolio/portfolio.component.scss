@@ -1,6 +1,8 @@
 .portfolio-main {
+    position: relative;
     background-color: #141D2F;
     padding: 100px;
+    padding: 100px 100px 100px 200px;
     position: relative;
     overflow-x: clip;
 }
@@ -31,7 +33,7 @@
 }
 
 .port-vector-two {
-    width: 485px;
+    width: 600px;
     height: 3px;
     background-color: #4B47FF;
 }

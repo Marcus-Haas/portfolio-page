@@ -1,3 +1,14 @@
+@media(max-width: 1600px) {
+    .contact-content {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .contact-vector {
+        width: 50px;
+    }
+}
+
 @media(max-width: 1438px) {
     .contact-name {
         font-size: 60px;
