@@ -22,7 +22,9 @@
 }
 
 .contact-content {
-    padding: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px;
     box-sizing: border-box;
     display: flex;
 }
@@ -58,8 +60,6 @@
     top: 12px;
     right: 10px;
 }
-
-
 
 form {
     display: flex;

@@ -21,12 +21,15 @@
 
                 <div class="input-helper">
                     <input #name="ngModel" onlyText [(ngModel)]="contactData.name"
-                        [class.green-input]="name.valid && name.touched" [class.red-input]="!name.valid && name.touched"
-                        type="text" class="input-style" id="name" name="name"
+                        [class.green-input]="name.valid && name.touched"
+                        [class.red-input]="!name.valid && name.touched
+                        || !name.valid && message.touched || !name.valid && email.touched || !name.valid && checkboxTouched" type="text" class="input-style" id="name"
+                        name="name"
                         [placeholder]="language.german ? germanText.placeholder_name : englishText.placeholder_name"
                         required pattern="^[^0-9]+$">
                     <div class="input-image">
-                        @if (!name.valid && name.touched) {
+                        @if (!name.valid && name.touched || !name.valid && message.touched || !name.valid &&
+                        email.touched || !name.valid && checkboxTouched) {
                         <img src="/assets/img/stop.png" alt>
                         }
                         @if (name.valid && name.touched) {
@@ -34,7 +37,8 @@
                         }
                     </div>
 
-                    @if (!name.valid && name.touched) {
+                    @if (!name.valid && name.touched || !name.valid && email.touched || !name.valid && message.touched
+                    || !name.valid && checkboxTouched) {
                     <div class="warning-text">{{language.german ? germanText.warning_name : englishText.warning_name}}
                     </div>
                     }
@@ -45,10 +49,11 @@
                         required
                         [placeholder]="language.german ? germanText.placeholder_email : englishText.placeholder_email"
                         name="email" [class.green-input]="email.valid && email.touched"
-                        [class.red-input]="!email.valid && email.touched"
+                        [class.red-input]="!email.valid && email.touched || !email.valid && name.touched || !email.valid && message.touched || !email.valid && checkboxTouched"
                         pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
                     <div class="input-image">
-                        @if (!email.valid && email.touched) {
+                        @if (!email.valid && email.touched || !email.valid && name.touched || !email.valid &&
+                        message.touched || !email.valid && checkboxTouched) {
                         <img src="/assets/img/stop.png" alt>
                         }
                         @if (email.valid && email.touched) {
@@ -56,7 +61,8 @@
                         }
                     </div>
 
-                    @if (!email.valid && email.touched) {
+                    @if (!email.valid && email.touched || !email.valid && name.touched || !email.valid &&
+                    message.touched || !email.valid && checkboxTouched) {
                     <div class="warning-text">{{language.german ? germanText.warning_email : englishText.warning_email}}
                     </div>
                     }
@@ -64,13 +70,14 @@
 
                 <div class="input-helper">
                     <div class="textarea-helper" [class.green-input]="message.valid && message.touched"
-                        [class.red-border]="!message.valid && message.touched">
+                        [class.red-border]="!message.valid && message.touched || !message.valid && name.touched || !message.valid && email.touched || !message.valid && checkboxTouched">
                         <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" id="message"
                             [placeholder]="language.german ? germanText.placeholder_message : englishText.placeholder_message"
                             required></textarea>
                     </div>
                     <div class="input-image">
-                        @if (!message.valid && message.touched) {
+                        @if (!message.valid && message.touched || !message.valid && name.touched || !message.valid &&
+                        email.touched || !message.valid && checkboxTouched) {
                         <img src="/assets/img/stop.png" alt>
                         }
                         @if (message.valid && message.touched) {
@@ -78,7 +85,8 @@
                         }
                     </div>
 
-                    @if (!message.valid && message.touched) {
+                    @if (!message.valid && message.touched || !message.valid && name.touched || !message.valid &&
+                    email.touched || !message.valid && checkboxTouched) {
                     <div class="warning-text">{{language.german ? germanText.warning_message :
                         englishText.warning_message}}</div>
                     }
@@ -106,7 +114,8 @@
                     </div>
 
 
-                    @if (!accepted && checkboxTouched){
+                    @if (!accepted && checkboxTouched || !accepted && message.touched || !accepted && email.touched ||
+                    !accepted && name.touched){
                     <div class="warning-text">
                         {{language.german ? germanText.warning_policy : englishText.warning_policy}}</div>}
                 </div>
