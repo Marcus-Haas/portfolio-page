@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, QueryList, ViewChildren, ElementRef } from '@angular/core';
 import { GlobalService } from '../../global.service';
 
 @Component({
@@ -9,11 +9,28 @@ import { GlobalService } from '../../global.service';
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss', './responsive-projects.component.scss']
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements AfterViewInit {
 
-  constructor(public langunage: GlobalService){}
+  @ViewChildren('project') projects!: QueryList<ElementRef>;
+
+  constructor(public language: GlobalService){}
 
   changeDirection = false;
+
+  ngAfterViewInit() {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fadeIn');
+          // observer.unobserve(entry.target);  // Stop observing once it is visible
+        } else {
+          entry.target.classList.remove('fadeIn');
+        }
+      });
+    });
+
+    this.projects.forEach(project => observer.observe(project.nativeElement));
+  }
 
   projetcs = [
     {

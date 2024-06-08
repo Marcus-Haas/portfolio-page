@@ -1,17 +1,17 @@
 <div class="main-projects">
     @for (item of projetcs; track $index) {
 
-    <div [class.reverse]="$index % 2 != 0">
+    <div #project [class.reverse]="$index % 2 != 0">
         <div class="image-container" [ngClass]="$index % 2 != 0 ? 'position-1' : 'position-2'">
             <img src="/assets/img/projects_img/{{ item.image }}.png" alt="">
         </div>
         <div class="details-container" [class.flex-end]="$index % 2 != 0">
             <span class="name">{{ item.name }}</span>
             <span class="language">{{ item.language }}</span>
-            @if(langunage.english){
+            @if(language.english){
             <span [class.text-end]="$index % 2 != 0">{{ item.en_description }}</span>
             }
-            @if(langunage.german){
+            @if(language.german){
             <span [class.text-end]="$index % 2 != 0">{{ item.ger_description }}</span>
             }
             <div>
