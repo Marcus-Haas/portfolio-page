@@ -1,150 +1,160 @@
-<div class="contact-main" id="contact">
-    <div class="contact-head">
-        <div class="contact-vector"></div>
-        <span class="contact-name">Contact</span>
-    </div>
+<div class="contact-wrapper">
+    <div class="contact-vector"></div>
 
-    <div class="contact-content">
-        <div class="contact-details">
-            <span class="contact-topic">{{language.german ? germanText.head_text : englishText.head_text}}
-            </span>
-            <span>{{language.german? germanText.main_text : englishText.main_text}}</span>
-            @if(language.english){
-            <span>Need a Frontend developer? <b>Contact me!</b></span>
-            }
-            @if(language.german){
-            <span>Sie benötigen einen Web-Entwickler? <b>Kontaktieren Sie mich!</b></span>
-            }
+    <div class="contact-main" id="contact">
+        <div class="contact-head">
+            <span class="contact-name">Contact</span>
         </div>
-        <div class="contact-form">
-            <form ngValidateForm (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
-                <div class="input-helper">
-                    <input #name="ngModel" onlyText [(ngModel)]="contactData.name"
-                        [class.green-input]="name.valid && name.touched"
-                        [class.red-input]="!name.valid && name.touched
+        <div class="contact-content">
+            <div class="contact-details">
+                <span class="contact-topic">{{language.german ? germanText.head_text : englishText.head_text}}
+                </span>
+                <span>{{language.german? germanText.main_text : englishText.main_text}}</span>
+                @if(language.english){
+                <span>Need a Frontend developer? <b>Contact me!</b></span>
+                }
+                @if(language.german){
+                <span>Sie benötigen einen Web-Entwickler? <b>Kontaktieren Sie mich!</b></span>
+                }
+            </div>
+            <div class="contact-form">
+                <form ngValidateForm (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+
+                    <div class="input-helper">
+                        <input #name="ngModel" onlyText [(ngModel)]="contactData.name"
+                            [class.green-input]="name.valid && name.touched"
+                            [class.red-input]="!name.valid && name.touched
                         || !name.valid && message.touched || !name.valid && email.touched || !name.valid && checkboxTouched" type="text" class="input-style" id="name"
-                        name="name"
-                        [placeholder]="language.german ? germanText.placeholder_name : englishText.placeholder_name"
-                        required pattern="^[^0-9]+$">
-                    <div class="input-image">
-                        @if (!name.valid && name.touched || !name.valid && message.touched || !name.valid &&
-                        email.touched || !name.valid && checkboxTouched) {
-                        <img src="/assets/img/stop.png" alt>
-                        }
-                        @if (name.valid && name.touched) {
-                        <img src="/assets/img/check.png" alt>
-                        }
-                    </div>
-
-                    @if (!name.valid && name.touched || !name.valid && email.touched || !name.valid && message.touched
-                    || !name.valid && checkboxTouched) {
-                    <div class="warning-text">{{language.german ? germanText.warning_name : englishText.warning_name}}
-                    </div>
-                    }
-                </div>
-
-                <div class="input-helper">
-                    <input #email="ngModel" [(ngModel)]="contactData.email" class="input-style" id="email" type="email"
-                        required
-                        [placeholder]="language.german ? germanText.placeholder_email : englishText.placeholder_email"
-                        name="email" [class.green-input]="email.valid && email.touched"
-                        [class.red-input]="!email.valid && email.touched || !email.valid && name.touched || !email.valid && message.touched || !email.valid && checkboxTouched"
-                        pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
-                    <div class="input-image">
-                        @if (!email.valid && email.touched || !email.valid && name.touched || !email.valid &&
-                        message.touched || !email.valid && checkboxTouched) {
-                        <img src="/assets/img/stop.png" alt>
-                        }
-                        @if (email.valid && email.touched) {
-                        <img src="/assets/img/check.png" alt>
-                        }
-                    </div>
-
-                    @if (!email.valid && email.touched || !email.valid && name.touched || !email.valid &&
-                    message.touched || !email.valid && checkboxTouched) {
-                    <div class="warning-text">{{language.german ? germanText.warning_email : englishText.warning_email}}
-                    </div>
-                    }
-                </div>
-
-                <div class="input-helper">
-                    <div class="textarea-helper" [class.green-input]="message.valid && message.touched"
-                        [class.red-border]="!message.valid && message.touched || !message.valid && name.touched || !message.valid && email.touched || !message.valid && checkboxTouched">
-                        <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" id="message"
-                            [placeholder]="language.german ? germanText.placeholder_message : englishText.placeholder_message"
-                            required></textarea>
-                    </div>
-                    <div class="input-image">
-                        @if (!message.valid && message.touched || !message.valid && name.touched || !message.valid &&
-                        email.touched || !message.valid && checkboxTouched) {
-                        <img src="/assets/img/stop.png" alt>
-                        }
-                        @if (message.valid && message.touched) {
-                        <img src="/assets/img/check.png" alt>
-                        }
-                    </div>
-
-                    @if (!message.valid && message.touched || !message.valid && name.touched || !message.valid &&
-                    email.touched || !message.valid && checkboxTouched) {
-                    <div class="warning-text">{{language.german ? germanText.warning_message :
-                        englishText.warning_message}}</div>
-                    }
-                </div>
-
-                <div class="input-helper">
-                    <div class="checkbox-div">
-                        <div class="wrapper-checkbox" (click)="accepted = !accepted; checkboxTouched = true">
-                            <div class="checkbox-frame"></div>
-                            <div class="checkbox-circle"></div>
-                            @if(accepted){
-                            <div class="check">✓</div>
+                            name="name"
+                            [placeholder]="language.german ? germanText.placeholder_name : englishText.placeholder_name"
+                            required pattern="^[^0-9]+$">
+                        <div class="input-image">
+                            @if (!name.valid && name.touched || !name.valid && message.touched || !name.valid &&
+                            email.touched || !name.valid && checkboxTouched) {
+                            <img src="/assets/img/stop.png" alt>
+                            }
+                            @if (name.valid && name.touched) {
+                            <img src="/assets/img/check.png" alt>
                             }
                         </div>
 
-                        @if(language.english){
-                        <span class="privacy">I´ve read the <a routerLink="imprint">privacy policy</a> and agree to the
-                            processing of my data as outlined.</span>
-                        }
-                        @if(language.german){
-                        <span class="privacy">Ich habe die <a routerLink="imprint">Datenschutzerklärung</a> gelesen und
-                            bin
-                            mit der beschriebenen Verarbeitung meiner Daten einverstanden.</span>
+                        @if (!name.valid && name.touched || !name.valid && email.touched || !name.valid &&
+                        message.touched
+                        || !name.valid && checkboxTouched) {
+                        <div class="warning-text">{{language.german ? germanText.warning_name :
+                            englishText.warning_name}}
+                        </div>
                         }
                     </div>
 
+                    <div class="input-helper">
+                        <input #email="ngModel" [(ngModel)]="contactData.email" class="input-style" id="email"
+                            type="email" required
+                            [placeholder]="language.german ? germanText.placeholder_email : englishText.placeholder_email"
+                            name="email" [class.green-input]="email.valid && email.touched"
+                            [class.red-input]="!email.valid && email.touched || !email.valid && name.touched || !email.valid && message.touched || !email.valid && checkboxTouched"
+                            pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+                        <div class="input-image">
+                            @if (!email.valid && email.touched || !email.valid && name.touched || !email.valid &&
+                            message.touched || !email.valid && checkboxTouched) {
+                            <img src="/assets/img/stop.png" alt>
+                            }
+                            @if (email.valid && email.touched) {
+                            <img src="/assets/img/check.png" alt>
+                            }
+                        </div>
 
-                    @if (!accepted && checkboxTouched || !accepted && message.touched || !accepted && email.touched ||
-                    !accepted && name.touched){
-                    <div class="warning-text">
-                        {{language.german ? germanText.warning_policy : englishText.warning_policy}}</div>}
-                </div>
+                        @if (!email.valid && email.touched || !email.valid && name.touched || !email.valid &&
+                        message.touched || !email.valid && checkboxTouched) {
+                        <div class="warning-text">{{language.german ? germanText.warning_email :
+                            englishText.warning_email}}
+                        </div>
+                        }
+                    </div>
 
-                <div class="submit-helper">
-                    <input [disabled]="!contactForm.valid || !accepted"
-                        [class.valid-btn]="contactForm.valid && accepted" class="submit-btn" type="submit"
-                        value="{{language.german ? germanText.submit_btn : englishText.submit_btn}}">
+                    <div class="input-helper">
+                        <div class="textarea-helper" [class.green-input]="message.valid && message.touched"
+                            [class.red-border]="!message.valid && message.touched || !message.valid && name.touched || !message.valid && email.touched || !message.valid && checkboxTouched">
+                            <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" id="message"
+                                [placeholder]="language.german ? germanText.placeholder_message : englishText.placeholder_message"
+                                required></textarea>
+                        </div>
+                        <div class="input-image">
+                            @if (!message.valid && message.touched || !message.valid && name.touched || !message.valid
+                            &&
+                            email.touched || !message.valid && checkboxTouched) {
+                            <img src="/assets/img/stop.png" alt>
+                            }
+                            @if (message.valid && message.touched) {
+                            <img src="/assets/img/check.png" alt>
+                            }
+                        </div>
+
+                        @if (!message.valid && message.touched || !message.valid && name.touched || !message.valid &&
+                        email.touched || !message.valid && checkboxTouched) {
+                        <div class="warning-text">{{language.german ? germanText.warning_message :
+                            englishText.warning_message}}</div>
+                        }
+                    </div>
+
+                    <div class="input-helper">
+                        <div class="checkbox-div">
+                            <div class="wrapper-checkbox" (click)="accepted = !accepted; checkboxTouched = true">
+                                <div class="checkbox-frame"></div>
+                                <div class="checkbox-circle"></div>
+                                @if(accepted){
+                                <div class="check">✓</div>
+                                }
+                            </div>
+
+                            @if(language.english){
+                            <span class="privacy">I´ve read the <a routerLink="imprint">privacy policy</a> and agree to
+                                the
+                                processing of my data as outlined.</span>
+                            }
+                            @if(language.german){
+                            <span class="privacy">Ich habe die <a routerLink="imprint">Datenschutzerklärung</a> gelesen
+                                und
+                                bin
+                                mit der beschriebenen Verarbeitung meiner Daten einverstanden.</span>
+                            }
+                        </div>
+
+
+                        @if (!accepted && checkboxTouched || !accepted && message.touched || !accepted && email.touched
+                        ||
+                        !accepted && name.touched){
+                        <div class="warning-text">
+                            {{language.german ? germanText.warning_policy : englishText.warning_policy}}</div>}
+                    </div>
+
+                    <div class="submit-helper">
+                        <input [disabled]="!contactForm.valid || !accepted"
+                            [class.valid-btn]="contactForm.valid && accepted" class="submit-btn" type="submit"
+                            value="{{language.german ? germanText.submit_btn : englishText.submit_btn}}">
+                    </div>
+                </form>
+                <div class="go-up-btn">
+                    <a href="#atf">
+                        <div></div>
+                    </a>
                 </div>
-            </form>
-            <div class="go-up-btn">
-                <a href="#atf">
-                    <div></div>
-                </a>
             </div>
         </div>
+
+
+        @if(submitted){
+        <div class="dialog-frame" (click)="closeDialog()">
+            <div class="dialog-content">
+                <h1>{{ language.german ? germanText.submit_headline : englishText.submit_headline }}</h1>
+                <span>{{ language.german ? germanText.submit_text : englishText.submit_text }}</span>
+            </div>
+        </div>
+        }
     </div>
 
     <div class="contact-shadow">
         <img src="/assets/img/contact_shadow.png" alt="">
     </div>
-
-    @if(submitted){
-    <div class="dialog-frame" (click)="closeDialog()">
-        <div class="dialog-content">
-            <h1>{{ language.german ? germanText.submit_headline : englishText.submit_headline }}</h1>
-            <span>{{ language.german ? germanText.submit_text : englishText.submit_text }}</span>
-        </div>
-    </div>
-    }
-
 </div>

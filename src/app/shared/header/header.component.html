@@ -1,71 +1,76 @@
-<header>
-    <a href="" title="home">
-    <div class="logo">
-        <p class="first-letter">M</p>arcus
-    </div>
-    </a>
-    <nav>
-        <div>
-            <a class="header-link" href="#about-me" (click)="navigation('about-me')" [class.hoverColor]="aboutMeBorder">About me</a>
-            <div class="border" [class.hoverBorder]="aboutMeBorder"></div>
-        </div>
-        <div>
-            <a class="header-link" href="#skills" (click)="navigation('skills')" [class.hoverColor]="skillsBorder">Skills</a>
-            <div class="border" [class.hoverBorder]="skillsBorder"></div>
-        </div>
-        <div>
-            <a class="header-link" href="#portfolio" (click)="navigation('portfolio')" [class.hoverColor]="portfolioBorder">Portfolio</a>
-            <div class="border" [class.hoverBorder]="portfolioBorder"></div>
-        </div>
-        <div class="translate-box">
-            <div>
-                <div (click)="translation('en')" [class.hoverColor]="englishBorder">EN</div>
-                <div class="border-trans" [class.hoverBorder]="englishBorder"></div>
-            </div>
-            |
-            <div>
-                <div (click)="translation('de')" [class.hoverColor]="germanBorder">DE</div>
-                <div class="border-trans" [class.hoverBorder]="germanBorder"></div>
-            </div>
-        </div>
-    </nav>
-    <div id="test" class="hamburger-menu" (click)="showAndHideMenu()">
-        <img src="/assets/img/burger.png" alt="">
-    </div>
-
-
-    <!-------------------------------------Mobile menu start--------------------------------------------------->
-
-    <div class="burger-overlay" [class.burger-show]="mobile_menu">
-        <div class="overlay-head">
+<div class="header-wrapper">
+    <header>
+        <a href="" title="home">
             <div class="logo">
                 <p class="first-letter">M</p>arcus
             </div>
-            <div class="close-burger" (click)="closeMenu()">
-                <img src="/assets/img/close.png" alt="">
+        </a>
+        <nav>
+            <div>
+                <a class="header-link" href="#about-me" (click)="navigation('about-me')"
+                    [class.hoverColor]="aboutMeBorder">About me</a>
+                <div class="border" [class.hoverBorder]="aboutMeBorder"></div>
             </div>
-        </div>
-        <div class="mobile-nav">
-            <div (click)="closeMenu()">
-                <a href="#about-me">About me</a>
+            <div>
+                <a class="header-link" href="#skills" (click)="navigation('skills')"
+                    [class.hoverColor]="skillsBorder">Skills</a>
+                <div class="border" [class.hoverBorder]="skillsBorder"></div>
             </div>
-            <div (click)="closeMenu()">
-                <a href="#skills">My skills</a>
+            <div>
+                <a class="header-link" href="#portfolio" (click)="navigation('portfolio')"
+                    [class.hoverColor]="portfolioBorder">Portfolio</a>
+                <div class="border" [class.hoverBorder]="portfolioBorder"></div>
             </div>
-            <div (click)="closeMenu()">
-                <a href="#portfolio">Portfolio</a>
-            </div>
-            <div (click)="closeMenu()">
-                <a href="#contact">Contact</a>
-            </div>
-            <div class="translate-box-mobile">
-                <div (click)="closeMenu(); translation('en')">EN</div>
+            <div class="translate-box">
+                <div>
+                    <div (click)="translation('en')" [class.hoverColor]="englishBorder">EN</div>
+                    <div class="border-trans" [class.hoverBorder]="englishBorder"></div>
+                </div>
                 |
-                <div (click)="closeMenu(); translation('de')">DE</div>
+                <div>
+                    <div (click)="translation('de')" [class.hoverColor]="germanBorder">DE</div>
+                    <div class="border-trans" [class.hoverBorder]="germanBorder"></div>
+                </div>
+            </div>
+        </nav>
+        <div id="test" class="hamburger-menu" (click)="showAndHideMenu()">
+            <img src="/assets/img/burger.png" alt="">
+        </div>
+
+
+        <!-------------------------------------Mobile menu start--------------------------------------------------->
+
+        <div class="burger-overlay" [class.burger-show]="mobile_menu">
+            <div class="overlay-head">
+                <div class="logo">
+                    <p class="first-letter">M</p>arcus
+                </div>
+                <div class="close-burger" (click)="closeMenu()">
+                    <img src="/assets/img/close.png" alt="">
+                </div>
+            </div>
+            <div class="mobile-nav">
+                <div (click)="closeMenu()">
+                    <a href="#about-me">About me</a>
+                </div>
+                <div (click)="closeMenu()">
+                    <a href="#skills">My skills</a>
+                </div>
+                <div (click)="closeMenu()">
+                    <a href="#portfolio">Portfolio</a>
+                </div>
+                <div (click)="closeMenu()">
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="translate-box-mobile">
+                    <div (click)="closeMenu(); translation('en')">EN</div>
+                    |
+                    <div (click)="closeMenu(); translation('de')">DE</div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-------------------------------------Mobile menu end--------------------------------------------------->
+        <!-------------------------------------Mobile menu end--------------------------------------------------->
 
-</header>
+    </header>
+</div>

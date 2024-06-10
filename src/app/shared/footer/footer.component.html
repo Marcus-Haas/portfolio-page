@@ -1,33 +1,36 @@
-<footer>
-    <div class="footer-content">
-        <a href="" title="home">
-            <div class="footer-name">
-                <span class="first-letter">M</span>
-                <span>arcus</span>
+<div class="footer-wrapper">
+    <div class="footer-border"></div>
+    <footer>
+        <div class="footer-content">
+            <a href="" title="home">
+                <div class="footer-name">
+                    <span class="first-letter">M</span>
+                    <span>arcus</span>
+                </div>
+            </a>
+            <span class="copyright">&copy; Marcus Haas 2024</span>
+            <div class="footer-right">
+                <a href="https://github.com/Marcus-Haas" target="_blank">
+                    <img src="/assets/img/github.png" alt="">
+                </a>
+                <a href="#contact">
+                    <img src="/assets/img/email.png" alt="">
+                </a>
+                <a href="https://linkedin.com" target="_blank">
+                    <img src="/assets/img/linkedin.png" alt="">
+                </a>
             </div>
-        </a>
-        <span class="copyright">&copy; Marcus Haas 2024</span>
-        <div class="footer-right">
-            <a href="https://github.com/Marcus-Haas" target="_blank">
-                <img src="/assets/img/github.png" alt="">
-            </a>
-            <a href="#contact">
-                <img src="/assets/img/email.png" alt="">
-            </a>
-            <a href="https://linkedin.com" target="_blank">
-                <img src="/assets/img/linkedin.png" alt="">
-            </a>
         </div>
-    </div>
-    <div class="imprint-box">
-        <div>
-            @if(language.german){
-            <a routerLink="imprint">Impressum</a>
-            }
-            @if(language.english){
+        <div class="imprint-box">
+            <div>
+                @if(language.german){
+                <a routerLink="imprint">Impressum</a>
+                }
+                @if(language.english){
                 <a routerLink="imprint">Imprint</a>
                 }
-            <div class="imprint-line"></div>
+                <div class="imprint-line"></div>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
+</div>

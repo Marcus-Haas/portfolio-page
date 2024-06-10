@@ -1,9 +1,17 @@
+.imprint-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: clip;
+    position: relative;
+}
+
 .imprint {
     background-color: #141D2F;
     padding: 100px 200px 100px 200px;
     box-sizing: border-box;
-    position: relative;
-    overflow: clip;
+    width: 100%;
+    max-width: 1920px;
 
     >div {
         padding-top: 50px;
@@ -21,7 +29,7 @@ h1 {
 }
 
 .imprint-vector {
-    width: 150px;
+    width: calc((100% - 1920px)/2 + 180px);
     height: 3px;
     background-color: #4B47FF;
     position: absolute;
@@ -61,13 +69,19 @@ a {
     height: 500px;
 }
 
+@media(max-width: 1920px) {
+    .imprint-vector {
+        width: 180px;
+    }
+}
+
 @media(max-width: 1600px) {
     .imprint {
         padding: 100px;
     }
 
     .imprint-vector {
-        width: 50px;
+        width: 80px;
     }
 }
 
@@ -91,7 +105,7 @@ a {
     }
 
     .imprint-vector {
-        width: 35px;
+        width: 40px;
     }
 }
 

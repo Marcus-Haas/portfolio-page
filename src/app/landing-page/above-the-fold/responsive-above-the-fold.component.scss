@@ -1,6 +1,24 @@
+@media(max-width: 1920px) {
+    .atf-vector-extension {
+        width: 180px;
+    }
+}
+
 @media(max-width: 1600px) {
     .atf-main {
         padding: 0px 100px 100px 100px;
+    }
+
+    .atf-bottom {
+        left: 100px;
+    }
+
+    .atf-vector-extension {
+        width: 80px;
+    }
+
+    .atf-scroll-down {
+        right: 50px;
     }
 }
 
@@ -18,7 +36,6 @@
     .rotate {
         font-size: 40px;
     }
-
 }
 
 @media(max-width: 1100px) {
@@ -26,8 +43,16 @@
         padding: 0px 50px 100px 50px;
     }
 
+    .atf-vector-extension {
+        width: 40px;
+    }
+
     .atf-image {
         left: 0;
+    }
+
+    .atf-shadow {
+        width: 50%;
     }
 
     .shadow-image {
@@ -49,8 +74,12 @@
         font-size: 29px;
     }
 
+    .atf-bottom {
+        left: 50px;
+    }
+
     .atf-scroll-down {
-        right: 25px;
+        right: 0px;
     }
 }
 
@@ -71,12 +100,13 @@
     .shadow-image {
         left: unset;
         height: 100%;
-        margin-top: 100px;
+        margin-top: 200px;
+        width: 100%;
     }
 
     .atf-image {
         left: unset;
-        margin-top: 100px;
+        margin-top: 150px;
         height: 70vh;
     }
 
@@ -88,17 +118,15 @@
         top: 50vh;
 
         >img {
-            height: 45vh;
+            height: 40vh;
         }
     }
 
     .atf-scroll-down {
         display: none;
-
     }
 
     .atf-bottom {
-        bottom: 20px;
 
         a {
             >span {
@@ -111,7 +139,14 @@
 @media(max-width: 550px) {
     .atf-main {
         padding: 0px 30px 100px 30px;
+    }
 
+    .atf-vector-extension {
+        width: 25px;
+    }
+
+    .atf-bottom {
+        left: 30px;
     }
 }
 
@@ -119,6 +154,10 @@
     .atf-main {
         padding: 0px 15px 100px 15px;
         gap: 50px;
+    }
+
+    .atf-vector-extension {
+        width: 13px;
     }
 
     .right-content {
@@ -135,18 +174,14 @@
 
     .wave {
 
-
         >img {
             height: 25vh;
         }
     }
 
-    .atf-border {
-        width: 55px;
-    }
-
     .atf-bottom {
         gap: 30px;
+        left: 15px;
     }
 
     .frontend-text {
@@ -167,5 +202,17 @@
         width: 140px;
         height: 50px;
     }
+}
 
+@media(max-width: 350px) {
+    .atf-image {
+        height: 45vh;
+    }
+
+    .wave {
+
+        >img {
+            height: 18vh;
+        }
+    }
 }

@@ -1,15 +1,23 @@
-.about-me-main {
+.am-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
     position: relative;
+    overflow: clip
+}
+
+.about-me-main {
     background-color: #141D2F;
     padding-left: 200px;
     display: flex;
-    overflow-x: clip;
+    max-width: 1920px;
+    width: 100%;
+    padding: 100px 200px 100px 200px;
+    box-sizing: border-box;
 }
 
 .about-me-content {
     width: 100%;
-    margin-top: 100px;
-    margin-bottom: 100px;
     z-index: 2;
     display: flex;
     align-items: center;
@@ -98,6 +106,14 @@ p {
     width: 350px;
     height: 3px;
     background-color: #00BEE8;
+}
+
+.vector-extension {
+    height: 3px;
+    background-color: #00BEE8;
+    position: absolute;
+    right: 0;
+    width: calc((100% - 1920px)/2 + 200px);
 }
 
 .about-me-shadow {

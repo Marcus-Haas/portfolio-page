@@ -1,11 +1,16 @@
+@media(max-width: 1920px) {
+    .skill-vector {
+        width: 180px;
+    }
+}
+
 @media(max-width: 1600px) {
     .skills-main {
-        padding-left: 100px;
-        padding-right: 100px;
+        padding: 100px 100px 100px 100px;
     }
 
     .skill-vector {
-        width: 60px;
+        width: 80px;
     }
 }
 
@@ -21,12 +26,11 @@
 
 @media(max-width: 1100px) {
     .skills-main {
-        padding-left: 50px;
-        padding-right: 50px;
+        padding: 100px 50px 100px 50px;
     }
 
     .skill-vector {
-        width: 35px;
+        width: 40px;
     }
 
     .skills {
@@ -37,10 +41,6 @@
 @media(max-width: 850px) {
     .skills-content {
         flex-direction: column-reverse;
-
-        >div {
-            margin-top: 0;
-        }
     }
 
     .skill-textframe {
@@ -54,6 +54,7 @@
         width: 100%;
         justify-content: center;
         max-width: unset;
+        margin-top: 75px;
 
         >div {
             justify-content: flex-start;
@@ -73,8 +74,7 @@
 
 @media(max-width: 550px) {
     .skills-main {
-        padding-left: 30px;
-        padding-right: 30px;
+        padding: 100px 30px 100px 30px;
     }
 
     .skill-textframe {
@@ -83,7 +83,7 @@
     }
 
     .skill-vector {
-        width: 30px;
+        width: 25px;
     }
 
     .skills {
@@ -101,8 +101,7 @@
 
 @media(max-width: 450px) {
     .skills-main {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding: 100px 15px 100px 15px;
     }
 
     .headline {
@@ -116,14 +115,6 @@
     .skills {
         column-gap: 0;
         row-gap: 30px;
-    }
-
-    .skills-content {
-        padding-top: 50px;
-
-        >div {
-            margin-bottom: 50px;
-        }
     }
 
     a {

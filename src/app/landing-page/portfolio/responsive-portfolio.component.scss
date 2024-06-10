@@ -1,10 +1,16 @@
-@media(max-width: 1600px) {
-    .portfolio-main {
-        padding: 100px 100px 100px 100px;
+@media(max-width: 1920px) {
+    .port-vector-extension {
+        width: 200px;
     }
 
     .port-vector-two {
         width: 485px;
+    }
+}
+
+@media(max-width: 1600px) {
+    .portfolio-main {
+        padding: 100px 100px 100px 100px;
     }
 }
 
@@ -14,9 +20,9 @@
     }
 }
 
-@media(max-width: 1250px) {
+@media(max-width: 1300px) {
     .port-vector-two {
-        width: 450px;
+        width: 375px;
     }
 }
 
@@ -24,23 +30,31 @@
     .portfolio-main {
         padding: 100px 50px 100px 50px;
     }
+
+    .port-vector-extension {
+        width: 50px;
+    }
+
+    .port-vector-two {
+        width: 325px;
+    }
 }
 
 @media(max-width: 1000px) {
     .port-vector-two {
-        width: 400px;
+        width: 250px;
     }
 }
 
-@media(max-width: 900px) {
-    .port-vector-two {
-        width: 333px;
-    }
-}
+
 
 @media(max-width: 850px) {
     .portfolio-main {
-        padding: 100px 0px 100px 50px;
+        padding: 100px 0px 0px 50px;
+    }
+
+    .port-vector-extension {
+        width: 50px;
     }
 
     .port-header {
@@ -49,10 +63,6 @@
         >p {
             padding-right: 50px;
         }
-    }
-
-    .port-vector-two {
-        width: 255px;
     }
 
     .portfolio-shadow {
@@ -78,6 +88,10 @@
         padding: 100px 0px 100px 30px;
     }
 
+    .port-vector-extension {
+        width: 30px;
+    }
+
     .port-vector-two {
         width: 170px;
     }
@@ -93,6 +107,10 @@
 @media(max-width: 450px) {
     .portfolio-main {
         padding: 150px 0px 100px 15px;
+    }
+
+    .port-vector-extension {
+        width: 15px;
     }
 
     .port-header {

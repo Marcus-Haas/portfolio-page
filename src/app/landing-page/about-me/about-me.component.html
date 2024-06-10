@@ -1,29 +1,32 @@
-<div class="about-me-main" id="about-me">
-    <div class="about-me-content">
-        <div class="text-frame">
-            <span>About me</span>
-            <div class="about-me-bottom">
-                <p>{{ language.german ? about_me_ger.main_text : about_me_en.main_text }}</p>
-                <div #bulletPoint class="about-me-details">
-                    <div>
-                        <img class="puzzle-bulp-picture" src="/assets/img/bulb.png" alt="">
+<div class="am-wrapper">
+    <div class="about-me-main" id="about-me">
+        <div class="about-me-content">
+            <div class="text-frame">
+                <span>About me</span>
+                <div class="about-me-bottom">
+                    <p>{{ language.german ? about_me_ger.main_text : about_me_en.main_text }}</p>
+                    <div #bulletPoint class="about-me-details">
+                        <div>
+                            <img class="puzzle-bulp-picture" src="/assets/img/bulb.png" alt="">
+                        </div>
+                        <p>{{ language.german ? about_me_ger.personal_one : about_me_en.personal_one }}</p>
                     </div>
-                    <p>{{ language.german ? about_me_ger.personal_one : about_me_en.personal_one }}</p>
-                </div>
-                <div #bulletPoint class="about-me-details">
-                    <img class="puzzle-bulp-picture" src="/assets/img/puzzle.png" alt="">
-                    <p>{{ language.german ? about_me_ger.personal_two : about_me_en.personal_two }}</p>
+                    <div #bulletPoint class="about-me-details">
+                        <img class="puzzle-bulp-picture" src="/assets/img/puzzle.png" alt="">
+                        <p>{{ language.german ? about_me_ger.personal_two : about_me_en.personal_two }}</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="picture-block">
-            <div class="ring">
-                <img src="/assets/img/bild2.png" alt="">
+            <div class="picture-block">
+                <div class="ring">
+                    <img src="/assets/img/bild2.png" alt="">
+                </div>
+                <div class="vector"></div>
+                <div class="vector-extension"></div>
             </div>
-            <div class="vector"></div>
         </div>
-    </div>
-    <div class="about-me-shadow">
-        <img src="/assets/img/shadow.png" alt="">
+        <div class="about-me-shadow">
+            <img src="/assets/img/shadow.png" alt="">
+        </div>
     </div>
 </div>

@@ -1,24 +1,26 @@
-<div class="skills-main" id="skills">
-    <div class="skills-content">
-        <div class="skills">
-            @for (skill of SKILLS_ARRAY; track SKILLS_ARRAY;){
-            <div>
-                <img #jumping src="/assets/img/skills_img/{{ skill }}.png" alt="">
-                <span class="skill-name">{{ skill }}</span>
-            </div>
-            }
+<div class="skills-wrapper">
+    <div class="skills-main" id="skills">
+        <div class="skills-content">
+            <div class="skills">
+                @for (skill of SKILLS_ARRAY; track SKILLS_ARRAY;){
+                <div>
+                    <img #jumping src="/assets/img/skills_img/{{ skill }}.png" alt="">
+                    <span class="skill-name">{{ skill }}</span>
+                </div>
+                }
 
-        </div>
-        <div class="skill-textframe">
-            <div>
-                <span class="headline">My skills</span>
-                <div class="skill-vector"></div>
             </div>
-            <p>{{language.german ? skill_description.ger : skill_description.en }}
-            </p>
-            <a href="#contact">
-                <button class="touch-btn">Get in touch</button>
-            </a>
+            <div class="skill-textframe">
+                <div>
+                    <span class="headline">My skills</span>
+                    <div class="skill-vector"></div>
+                </div>
+                <p>{{language.german ? skill_description.ger : skill_description.en }}
+                </p>
+                <a href="#contact">
+                    <button class="touch-btn">Get in touch</button>
+                </a>
+            </div>
         </div>
     </div>
     <div class="skill-shadow">

@@ -1,14 +1,17 @@
-<div class="portfolio-main" id="portfolio">
-    <div class="port-header">
-        <div>
-            <div class="port-vector-one"></div>
-            <span class="port-headline">Portfolio</span>
-            <div class="port-vector-two"></div>
+<div class="portfolio-wrapper">
+    <div class="portfolio-main" id="portfolio">
+        <div class="port-header">
+            <div>
+                <div class="port-vector-one"></div>
+                <span class="port-headline">Portfolio</span>
+                <div class="port-vector-two"></div>
+                <div class="port-vector-extension"></div>
+            </div>
+            <p>{{ language.german ? description.ger: description.en }}</p>
         </div>
-        <p>{{ language.german ? description.ger: description.en }}</p>
-    </div>
-    <app-projects></app-projects>
-    <div class="portfolio-shadow">
-        <img src="/assets/img/portfolio_shadow.png" alt="">
+        <app-projects></app-projects>
+        <div class="portfolio-shadow">
+            <img src="/assets/img/portfolio_shadow.png" alt="">
+        </div>
     </div>
 </div>

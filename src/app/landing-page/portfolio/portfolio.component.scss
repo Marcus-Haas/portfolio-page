@@ -1,14 +1,20 @@
+.portfolio-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: clip;
+}
+
 .portfolio-main {
-    position: relative;
     background-color: #141D2F;
-    padding: 100px;
-    padding: 100px 100px 100px 200px;
-    position: relative;
-    overflow-x: clip;
+    padding: 100px 200px 100px 200px;
+    box-sizing: border-box;
+    max-width: 1920px;
+    width: 100%;
 }
 
 .port-header {
-    margin-right: -100px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -33,9 +39,17 @@
 }
 
 .port-vector-two {
-    width: 600px;
+    width: 585px;
     height: 3px;
     background-color: #4B47FF;
+}
+
+.port-vector-extension {
+    height: 3px;
+    width: calc((100% - 1920px)/2 + 210px);
+    background-color: #4B47FF;
+    position: absolute;
+    right: 0;
 }
 
 .portfolio-shadow {
