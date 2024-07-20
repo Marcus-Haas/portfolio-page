@@ -57,8 +57,8 @@ export class ProjectsComponent implements AfterViewInit {
       en_description: 'A very Simple Customer Relationship Management system working with CRUD functionality.',
       ger_description: 'Ein einfaches Customer-Relationship-Management-System, das mit CRUD-Funktionalität arbeitet.',
       image: 'simple_crm',
-      link: '',
-      git: ''
+      link: 'https://simple-crm.marcus-haas.com/',
+      git: 'https://github.com/Marcus-Haas/simple-crm'
     },
   ];
 
