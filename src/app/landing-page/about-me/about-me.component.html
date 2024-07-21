@@ -2,7 +2,7 @@
     <div class="about-me-main" id="about-me">
         <div class="about-me-content">
             <div class="text-frame">
-                <span>About me</span>
+                <span>{{ language.german ? about_me_ger.headline : about_me_en.headline}}</span>
                 <div class="about-me-bottom">
                     <p>{{ language.german ? about_me_ger.main_text : about_me_en.main_text }}</p>
                     <div #bulletPoint class="about-me-details">

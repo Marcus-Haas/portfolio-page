@@ -1,7 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm, } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { Observable } from 'rxjs';
 import { GlobalService } from '../../global.service';
 import { HttpClient } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
@@ -24,10 +23,11 @@ export class ContactComponent {
 
 
   germanText = {
+    headline: 'Kontakt',
     placeholder_name: "Dein Name",
     placeholder_email: "Deine Email",
     placeholder_message: "Deine Nachricht",
-    head_text: "Sie stehen vor einer Herausforderung?",
+    head_text: "Benötigen Sie Verstärkung?",
     main_text: "Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen.",
     warning_name: 'Dein Name ist erforderlich',
     warning_email: 'Deine Email ist erforderlich',
@@ -39,6 +39,7 @@ export class ContactComponent {
   };
 
   englishText = {
+    headline: 'Contact',
     placeholder_name: "Your name",
     placeholder_email: "Your email",
     placeholder_message: "Your message",

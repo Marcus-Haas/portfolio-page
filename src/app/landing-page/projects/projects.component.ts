@@ -13,7 +13,7 @@ export class ProjectsComponent implements AfterViewInit {
 
   @ViewChildren('project') projects!: QueryList<ElementRef>;
 
-  constructor(public language: GlobalService){}
+  constructor(public language: GlobalService) { }
 
   changeDirection = false;
 
@@ -52,8 +52,8 @@ export class ProjectsComponent implements AfterViewInit {
       git: 'https://github.com/Marcus-Haas/new-join'
     },
     {
-      name: 'Dummy für CRM',
-      language: 'Angular | Firebase',
+      name: 'Simple CRM (Desktop version)',
+      language: 'Angular | Firebase | Material Design | Chart.js',
       en_description: 'A very Simple Customer Relationship Management system working with CRUD functionality.',
       ger_description: 'Ein einfaches Customer-Relationship-Management-System, das mit CRUD-Funktionalität arbeitet.',
       image: 'simple_crm',
